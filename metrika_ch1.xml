@@ -3,8 +3,8 @@
   NOTE: User and query level settings are set up in "users.xml" file.
 -->
 <yandex>
-	<macros>
-		<shard>1</shard>
-		<replica>ch1</replica>
-	</macros>
+    <macros>
+        <shard>1</shard>
+        <replica>ch1</replica>
+    </macros>
 </yandex>

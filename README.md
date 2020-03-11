@@ -28,4 +28,9 @@
 2. 进入容器操作命令: docker exec -it xxx bash
 3. 在容器内操作: clickhouse-client 
 
-因为为 ch 开启了 mysql_port, 所以也可以使用 mysql client 直接连接 9004 或者 9204 端口. 可以通过兼容的 mysql 协议完成查询.
+因为为 ch 开启了 mysql_port, 所以也可以使用 mysql client 直接连接 9004 或者 9204 端口. 可以通过兼容的 mysql 协议完成查询.k
+
+
+
+# refs
+* [航班飞行数据](https://clickhouse.tech/docs/zh/getting_started/example_datasets/ontime/)
