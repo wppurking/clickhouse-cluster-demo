@@ -31,6 +31,11 @@
 因为为 ch 开启了 mysql_port, 所以也可以使用 mysql client 直接连接 9004 或者 9204 端口. 可以通过兼容的 mysql 协议完成查询.k
 
 
+## 集群理解
+1 分片 2 副本, 也就只需要两台服务器相互之互为 master 的备份, 只要前端有 TCP 的 Load Balance 进行安全检查, 可以有一台服务器宕机并正常运行.
+对于 clickhouse 来说只有当单机无法承载足够的数据或者查询性能不足的时候再去考虑多分片, 因为如果上了 2 分片 2 副本, 原则上就需要 4 台服务器进行高可用的处理. 而 clickhouse 的单行性能和能够负责的存储量, 可能服务器纵向升级单台服务器到 one billion 或者 50TB 甚至更多都不会出现瓶颈. 其他互联网公司需要多分片多副本, 那是因为他们的数据量已经是朝着 PB 级别去的, 这个应用场景的量级不同, 不一定要追求多分片也可以高可用和高性能.
+
+
 
 # refs
 * [航班飞行数据](https://clickhouse.tech/docs/zh/getting_started/example_datasets/ontime/)
