@@ -3,6 +3,8 @@
 
 
 ## 目录结构介绍
+
+```
 .
 ├── README.md  
 ├── config.d   #  所有 clickhouse 都需要的 /etc/clickhouse-server/config.d 自定义配置
@@ -14,6 +16,7 @@
 ├── load.sh          # 将 1987 ~ 2018 的 ontime 数据导入 ch (需要 clickhouse-client 支持)
 ├── metrika_ch1.xml   # ch1 服务器自己的信息
 └── metrika_ch2.xml   # ch2 服务器自己的信息
+```
 
 
 ## clickhouse 数据目录
