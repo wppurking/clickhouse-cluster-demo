@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+  NOTE: User and query level settings are set up in "users.xml" file.
+-->
+<yandex>
+	<remote_servers>
+		<ch_demo>
+			<shard>
+				<!-- Optional. Shard weight when writing data. Default: 1. -->
+				<weight>1</weight>
+				<!-- Optional. Whether to write data to just one of the replicas. Default: false (write data to all replicas). -->
+				<internal_replication>true</internal_replication>
+				<replica>
+					<host>ch1</host>
+					<port>9000</port>
+					<user>default</user>
+					<password></password>
+				</replica>
+				<replica>
+					<host>ch2</host>
+					<port>9000</port>
+					<user>default</user>
+					<password></password>
+				</replica>
+			</shard>
+		</ch_demo>
+	</remote_servers>
+</yandex>

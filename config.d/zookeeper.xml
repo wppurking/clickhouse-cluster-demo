@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+  NOTE: User and query level settings are set up in "users.xml" file.
+-->
+<yandex>
+	<zookeeper>
+		<node index="1">
+			<host>zk</host>
+			<port>2181</port>
+		</node>
+	</zookeeper>
+</yandex>
