@@ -3,6 +3,15 @@
   NOTE: User and query level settings are set up in "users.xml" file.
 -->
 <yandex>
-  <mysql_port>9004</mysql_port>
+  <!-- merge docker_relate_config.xml -->
+  <listen_host>::</listen_host>
   <listen_host>0.0.0.0</listen_host>
+  <listen_try>1</listen_try>
+  <mysql_port>9004</mysql_port>
+
+  <!--
+    <logger>
+        <console>1</console>
+    </logger>
+   -->
 </yandex>

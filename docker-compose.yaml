@@ -12,6 +12,9 @@ services:
   ch1:
     container_name: ch1
     image: yandex/clickhouse-server:20.1
+    links:
+      #- ch2
+      - zk
     ports:
       # http_port
       - "8123:8123"
@@ -27,8 +30,8 @@ services:
       - "9004:9004"
     volumes:
       - "./ch1:/var/lib/clickhouse"
-      - ./config.d:/etc/clickhouse-server/config.d"
-      - ./metrica_ch1.xml:/etc/metrica.xml"
+      - "./config.d:/etc/clickhouse-server/config.d"
+      - "./metrika_ch1.xml:/etc/metrika.xml"
     ulimits:
       nproc: 65535
       nofile:
@@ -38,6 +41,9 @@ services:
   ch2:
     container_name: ch2
     image: yandex/clickhouse-server:20.1
+    links:
+      #- ch1
+      - zk
     ports:
       # http_port
       - "8223:8123"
@@ -53,8 +59,8 @@ services:
       - "9204:9004"
     volumes:
       - "./ch2:/var/lib/clickhouse"
-      - ./config.d:/etc/clickhouse-server/config.d"
-      - ./metrica_ch2.xml:/etc/metrica.xml"
+      - "./config.d:/etc/clickhouse-server/config.d"
+      - "./metrika_ch2.xml:/etc/metrika.xml"
     ulimits:
       nproc: 65535
       nofile:
