@@ -3,6 +3,7 @@
   NOTE: User and query level settings are set up in "users.xml" file.
 -->
 <yandex>
+	<!-- 因为 <remote_servers incl> 带有 incl, 所以多次的内容会以 include 的方式重复出现 -->
 	<remote_servers>
 		<ch_demo>
 			<shard>
